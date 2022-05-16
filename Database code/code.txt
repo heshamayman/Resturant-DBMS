@@ -1,0 +1,39 @@
+create table employees (
+employee_id number(3) primary key,
+first_name varchar2(15) not null,
+last_name varchar2(15) not null,
+ssn number(16) not null unique,
+sex varchar2(6),
+salary number (5) not null,
+phone_number number(11) unique not null,
+city varchar2(15),
+street varchar2(10),
+building_number number(4)
+);
+create table customers(
+customer_id number(4) primary key ,
+first_name varchar2(15),
+last_name varchar2(15),
+phone_number number(11) unique not null,
+feed_back varchar2(4),
+city varchar2(15),
+street varchar2(10),
+building_number number(4)
+);
+create table departments (
+department_id number(4) primary key,
+department_name varchar2(15) not null
+);
+create table orders (
+order_id number(8) primary key,
+order_date date 
+);
+create table order_meals (
+quantity number (3)
+);
+create table meals (
+meal_id number (3) primary key ,
+meal_name varchar2(10) unique,
+meal_type varchar2(10) not null ,
+meal_price number(3) not null 
+);
